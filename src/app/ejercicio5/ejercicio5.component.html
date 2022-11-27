@@ -1,0 +1,75 @@
+<div class="container mt-4">
+    <h1>Compra de boletos de concierto</h1> 
+    <hr>
+    <h2>Datos del concierto</h2>
+    <div class="row mt-2">
+      <div class="col-2">
+              <label for="localidad">Localidad</label>
+          </div>
+          <div class="col-md-4">
+              <select [(ngModel)]="localidad" class="form-control">
+                  <option value="X">Seleccione el lugar del concierto</option>
+                  <option value="A">Atlanta, Georgia</option>
+                  <option value="B">Boston, Massachusetts</option>
+                  <option value="C">Chicago, Illinois</option>
+              </select>
+          </div>
+      </div>
+      <div class="row mt-2">
+          <div class="col-2">
+                  <label for="fecha">Fecha</label>
+              </div>
+              <div class="col-md-4">
+                  <select [(ngModel)]="fecha" class="form-control">
+                      <option value="X">Seleccione la fecha del concierto</option>
+                      <option value="V">Viernes</option>
+                      <option value="S">Sábado</option>
+                  </select>
+              </div>
+          </div>
+      <hr>
+      <div class="row mt-2">
+          <h2>Datos personales</h2>
+          <div class="col-2">
+              <label for="genero">Género</label>
+          </div>
+          <div class="col-md-4">
+              <select [(ngModel)]="genero" class="form-control">
+                  <option value="X">Seleccione su género</option>
+                  <option value="F">Femenino</option>
+                  <option value="M">Masculino</option>
+              </select>
+          </div>
+      </div>
+      <hr>
+      <h2>Total del boleto a pagar</h2>
+      <div class="row mt-2">
+          <div class="col-2">
+              <label for="precio">Precio:</label>
+          </div>
+          <div class="col-md-4">
+              <input type="text" [(ngModel)]="precio" class="form-control" disabled>
+          </div>
+      </div>
+      <div class="row mt-2">
+          <div class="col-2">
+              <label for="desc">Descuento:</label>
+          </div>
+          <div class="col-md-4">
+              <input type="text" [(ngModel)]="desc" class="form-control" disabled>
+          </div>
+      </div>
+      <div class="row mt-2">
+          <div class="col-2">
+              <label for="precioTotal">Total:</label>
+          </div>
+          <div class="col-md-4">
+              <input type="text" [(ngModel)]="precioTotal" class="form-control" disabled>
+          </div>
+          <div class="col">
+              <button class="btn btn-success" (click)="calcular();">Calcular</button>
+              <button class="btn btn-warning" (click)="Limpiar();">Limpiar</button>
+          </div>
+      </div>
+      <hr>
+  </div>

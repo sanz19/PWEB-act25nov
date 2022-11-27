@@ -1,0 +1,58 @@
+<div class="container mt-4">
+    <h1>Compra de boletos de avión</h1> 
+    <hr>
+    <h2>Datos del viaje</h2>
+    <div class="row">
+      <div class="col-2">
+              <label for="vuelo">Origen — Destino</label>
+          </div>
+          <div class="col-md-4">
+              <select [(ngModel)]="vuelo" class="form-control">
+                  <option value="X">Seleccione el origen y destino</option>
+                  <option value="1">Culiacán — Tijuana</option>
+                  <option value="2">Culiacán — DF</option>
+                  <option value="3">DF — Culiacán</option>
+                  <option value="4">DF — Guadalajara</option>
+                  <option value="5">Guadalajara — DF</option>
+                  <option value="6">Tijuana — Culiacán</option>
+              </select>
+          </div>
+      </div>
+      <hr>
+      <div class="row">
+          <h2>Datos personales</h2>
+          <div class="col-2">
+              <label for="edad">Edad</label>
+          </div>
+          <div class="col-md-4">
+              <input type="number" [(ngModel)]="edad" class="form-control" min="1" max="120">
+          </div>
+      </div>
+      <hr>
+      <h2>Total del boleto a pagar</h2>
+      <div class="row">
+          <div class="col-2">
+              <label for="precio">Precio:</label>
+          </div>
+          <div class="col-md-4">
+              <input type="text" name="" [(ngModel)]="precio" class="form-control" disabled>
+          </div>
+          <div class="col-2">
+              <label for="desc">Descuento:</label>
+          </div>
+          <div class="col-md-4">
+              <input type="text" name="" [(ngModel)]="desc" class="form-control" disabled>
+          </div>
+          <div class="col-2">
+              <label for="precioTotal">Total:</label>
+          </div>
+          <div class="col-md-4">
+              <input type="text" name="" [(ngModel)]="precioTotal" class="form-control" disabled>
+          </div>
+          <div class="col">
+              <button class="btn btn-success" (click)="calcular();">Calcular</button>
+              <button class="btn btn-warning" (click)="limpiar();">Limpiar</button>
+          </div>
+      </div>
+      <hr>
+  </div>
